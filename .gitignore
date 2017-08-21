@@ -286,3 +286,7 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+# Web Configs Release and Debug
+*.Release.config
+*.Debug.config
