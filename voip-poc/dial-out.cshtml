@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+@{
+    Response.ContentType = "text/xml";
+}
+<Response>
+    @if (Request["Digits"] == "1")
+    {
+        <Say>Dialing Jason</Say>
+        <Dial>@System.Configuration.ConfigurationManager.AppSettings["PhoneJason"]</Dial>
+    }
+    else if (Request["Digits"] == "2")
+    {
+        <Say>Dialing Josh</Say>
+        <Dial>@System.Configuration.ConfigurationManager.AppSettings["PhoneJosh"]</Dial>
+    }
+    else if (Request["Digits"] == "3")
+    {
+        <Say>Dialing Brandon</Say>
+        <Dial>@System.Configuration.ConfigurationManager.AppSettings["PhoneBrandon"]</Dial>
+    }
+    else if (Request["Digits"] == "4")
+    {
+        <Say>After the tone we will take a 30 second voice recording, afterwards it will be played back.</Say>
+        <Record maxLength="30" transcribe="true" action="handle-recording.cshtml" />
+    }
+    <Say>You did not choose a valid option. Goodbye.</Say>
+    <Hangup></Hangup>
+</Response>

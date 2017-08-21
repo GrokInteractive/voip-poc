@@ -1,0 +1,10 @@
+﻿@{
+    Response.ContentType = "text/xml";
+}<?xml version="1.0" encoding="UTF-8" ?>
+<Response>
+    <Say>Now we will play back your recording.</Say>
+    <Play>@Request["RecordingUrl"]</Play>
+    <Say>Please check the Twilio interface for transcription in a few minutes.</Say>
+    <Say>Goodbye.</Say>
+    <Hangup></Hangup>
+</Response>
