@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+@{
+
+    Response.ContentType = "text/xml";
+}
+<Response>
+    <Say>Welcome, this is a proof of concept application for voice recording and transcriptions.</Say>
+    <Gather numDigits="1" action="dial-out.cshtml" method="POST">
+        <Say>
+            To speak with Jason, press 1.
+            Press 2 to speak with Josh.
+            Press 3 to speak with Brandon.
+            Press 4 to test the voice recording functionalities.
+        </Say>
+    </Gather>
+</Response>
