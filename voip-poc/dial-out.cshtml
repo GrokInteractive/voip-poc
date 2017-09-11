@@ -7,16 +7,19 @@
     {
         <Say>Dialing Jason</Say>
         <Dial>@System.Configuration.ConfigurationManager.AppSettings["PhoneJason"]</Dial>
+        <Record maxLength="120" transcribe="true" />
     }
     else if (Request["Digits"] == "2")
     {
         <Say>Dialing Josh</Say>
         <Dial>@System.Configuration.ConfigurationManager.AppSettings["PhoneJosh"]</Dial>
+        <Record maxLength="120" transcribe="true" />
     }
     else if (Request["Digits"] == "3")
     {
         <Say>Dialing Brandon</Say>
         <Dial>@System.Configuration.ConfigurationManager.AppSettings["PhoneBrandon"]</Dial>
+        <Record maxLength="120" transcribe="true" />
     }
     else if (Request["Digits"] == "4")
     {
